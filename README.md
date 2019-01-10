@@ -33,6 +33,9 @@ This will produce two png files - sample1 is a profile from colon and sample2 is
 
 Sample1 - colon
 
+<img src="images/sample1.png" alt="sample1" width="200"/>
+
+
 ![](images/sample1.png)
 
 Sample2 - small intestine
