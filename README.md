@@ -31,13 +31,8 @@ using the following commands.
 
 This will produce two png files - sample1 is a profile from colon and sample2 is a profile from small intestine shown below.
 
-Sample1 - colon
 
-<img src="images/sample1.png" alt="sample1" height="50%" width="50%"/>
+<img src="images/sample1.png" alt="sample1" height="50%" width="50%" style="float: left/>
 
+<img src="images/sample1.png" alt="sample2" height="50%" width="50%" style="float: left/>
 
-![](images/sample1.png)
-
-Sample2 - small intestine
-
-![](images/sample2.png)
