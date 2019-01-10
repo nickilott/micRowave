@@ -3,7 +3,7 @@
 ## Motivation
 
 Participants involved in microbiome studies are often interested in receiving feedback on their own data. It is important
-to try and accomodate this interest in order to foster participant egagement.
+to try and accomodate this interest in order to foster participant engagement.
 
 ## What micRowave does
 
