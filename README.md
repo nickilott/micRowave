@@ -36,5 +36,5 @@ sample1 - colon
 
 sample2 - small intestine
 
-<img src="images/sample1.png" alt="sample2" height="75%" width="75%" style="float: left/>
+<img src="images/sample1.png" alt="sample2" height="75%" width="75%"/>
 
