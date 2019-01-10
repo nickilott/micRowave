@@ -22,7 +22,7 @@ using the following commands.
 
 ```
     install.packages("devtools")
-    install_github("micRowave", "nilott")
+    install_github("nickilott/micRowave")
 
     library("micRowave")
     microwave(genus_abundances, text="Thanks for participating")
