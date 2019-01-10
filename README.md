@@ -25,17 +25,16 @@ using the following commands.
     install_github("micRowave", "nilott")
 
     library("micRowave")
-
-    microwave(genus_abundances)
+    microwave(genus_abundances, text="Thanks for participating")
 ```
 
 This will produce two png files - sample1 is a profile from colon and sample2 is a profile from small intestine shown below.
 
-Colon
+sample1 - colon
 
 <img src="images/sample1.png" alt="sample1" height="75%" width="75%"/>
 
-Small intestine
+sample2 - small intestine
 
 <img src="images/sample1.png" alt="sample2" height="75%" width="75%" style="float: left/>
 
