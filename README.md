@@ -33,7 +33,7 @@ This will produce two png files - sample1 is a profile from colon and sample2 is
 
 Sample1 - colon
 
-<img src="images/sample1.png" alt="sample1" width="200"/>
+<img src="images/sample1.png" alt="sample1" height="50%" width="50%"/>
 
 
 ![](images/sample1.png)
