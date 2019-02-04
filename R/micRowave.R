@@ -178,7 +178,7 @@ buildDataFrame <- function(dat){
     pick.from <- c(rep(0.05, 75) , rep(0.2, 20), rep(1, 5))
     sizes <- sample(pick.from, 5000, replace=TRUE)
 
-    df <- data.frame(taxon=taxa,
+    df <- data.frame(taxon=as.character(taxa),
 	             x=x,
                      y=t,
                      size=sizes)
@@ -263,7 +263,7 @@ microwave <- function(abundances, with_image=TRUE, animation=FALSE, background="
 	dat <- subsetDataFrame(abundances, columnNumber=i)
 	colours <- setColours(dat)
 	df <- buildDataFrame(dat)
-        df$sample <- as.character(colnames(abundances)[i])
+        df$sample <- colnames(abundances)[i]
         dfs[[i]] <- df
 	print(str(df))
         percent.done <- (i/nsamples)*100
