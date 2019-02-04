@@ -264,6 +264,7 @@ microwave <- function(abundances, with_image=TRUE, animation=FALSE, background="
 	colours <- setColours(dat)
 	df <- buildDataFrame(dat)
         df$sample <- colnames(abundances)[i]
+        df$taxon <- as.character(df$taxon)
         dfs[[i]] <- df
 	print(str(df))
         percent.done <- (i/nsamples)*100
