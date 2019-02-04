@@ -263,7 +263,7 @@ microwave <- function(abundances, with_image=TRUE, animation=FALSE, background="
 	dat <- subsetDataFrame(abundances, columnNumber=i)
 	colours <- setColours(dat)
 	df <- buildDataFrame(dat)
-        df$sample <- [i]
+        df$sample <- i
         df$taxon <- as.character(df$taxon)
         dfs[[i]] <- df
 	print(str(df))
