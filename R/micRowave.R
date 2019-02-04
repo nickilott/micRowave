@@ -250,21 +250,33 @@ plotWave <- function(dat, cols, g="none", with_image=TRUE, background="white", t
 #' @importFrom png readPNG
 #' @export
 
-microwave <- function(abundances, with_image=TRUE, background="white", text=""){
+microwave <- function(abundances, with_image=TRUE, animation=FALSE, background="white", text=""){
 
     nsamples <- ncol(abundances)
     img <- readPNG(system.file("data", "epithelium.png", package="micRowave"))
     g <- rasterGrob(img, interpolate=TRUE)
+
+    dfs <- list()
 
     for (i in 1:ncol(abundances)){
         outfilename <- paste(colnames(abundances[i]), "png", sep=".")
 	dat <- subsetDataFrame(abundances, columnNumber=i)
 	colours <- setColours(dat)
 	df <- buildDataFrame(dat)
-	percent.done <- (i/nsamples)*100
+        df$sample <- colnames(abundances)[i]
+        dfs[[i]] <- df
+        percent.done <- (i/nsamples)*100
 	cat(paste0("creating plot ", i, "/", nsamples, " (", percent.done, "%)\n"))
 	wave <- plotWave(df, colours, g=g, with_image=with_image, background=background, text=text)
 	ggsave(outfilename, plot=wave, height=105, width=148, unit="mm")
+    }
+    if (animation==TRUE){
+        library(gganimate)
+	library(dplyr)
+        to.animate <- bind_rows(dfs) 
+        p <- plotWave(to.animate, colours, g=g, with_image=with_image, background=background, text=text)
+	p <- p + transition_states(sample) + ease_aes("linear")
+        animate(p, "allwaves.gif")
     }
 }
 
