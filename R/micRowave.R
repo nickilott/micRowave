@@ -199,6 +199,7 @@ buildDataFrame <- function(dat){
 #' data(genus_abundances)
 #' plotWave(genus_abundances, with_image=FALSE)
 #' @import ggplot2
+#' @export
 
 plotWave <- function(dat, cols, g="none", with_image=TRUE, background="white", text=""){
 
