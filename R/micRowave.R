@@ -263,8 +263,9 @@ microwave <- function(abundances, with_image=TRUE, animation=FALSE, background="
 	dat <- subsetDataFrame(abundances, columnNumber=i)
 	colours <- setColours(dat)
 	df <- buildDataFrame(dat)
-        df$sample <- colnames(abundances)[i]
+        df$sample <- as.character(colnames(abundances)[i])
         dfs[[i]] <- df
+	print(str(df))
         percent.done <- (i/nsamples)*100
 	cat(paste0("creating plot ", i, "/", nsamples, " (", percent.done, "%)\n"))
 	wave <- plotWave(df, colours, g=g, with_image=with_image, background=background, text=text)
