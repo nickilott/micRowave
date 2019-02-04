@@ -275,11 +275,12 @@ microwave <- function(abundances, with_image=TRUE, animation=FALSE, background="
     if (animation==TRUE){
         library(gganimate)
 	library(dplyr)
-        to.animate <- bind_rows(dfs) 
-        p <- plotWave(to.animate, colours, g=g, with_image=with_image, background=background, text=text)
-	p <- p + transition_states(sample) + ease_aes("linear")
-        animate(p, "allwaves.gif")
-    return(dfs)
+	return(dfs)
+        #to.animate <- bind_rows(dfs) 
+        #p <- plotWave(to.animate, colours, g=g, with_image=with_image, background=background, text=text)
+	#p <- p + transition_states(sample) + ease_aes("linear")
+        #animate(p, "allwaves.gif")
+
     }
 }
 
