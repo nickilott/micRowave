@@ -267,7 +267,6 @@ microwave <- function(abundances, with_image=TRUE, animation=FALSE, background="
         df$sample <- i
         df$taxon <- as.character(df$taxon)
         dfs[[i]] <- df
-	print(str(df))
         percent.done <- (i/nsamples)*100
 	cat(paste0("creating plot ", i, "/", nsamples, " (", percent.done, "%)\n"))
 	wave <- plotWave(df, colours, g=g, with_image=with_image, background=background, text=text)
