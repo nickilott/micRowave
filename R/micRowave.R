@@ -264,7 +264,7 @@ microwave <- function(abundances, with_image=TRUE, animation=FALSE, background="
 	dat <- subsetDataFrame(abundances, columnNumber=i)
 	colours <- setColours(dat)
 	df <- buildDataFrame(dat)
-        df$sample <- i
+        df$sample <- colnames(abundances)[i]
         df$taxon <- as.character(df$taxon)
         dfs[[i]] <- df
         percent.done <- (i/nsamples)*100
@@ -277,7 +277,7 @@ microwave <- function(abundances, with_image=TRUE, animation=FALSE, background="
 	library(dplyr)
         to.animate <- bind_rows(dfs) 
         p <- plotWave(to.animate, colours, g=g, with_image=with_image, background=background, text=text)
-	p <- p + transition_time(sample) + ease_aes("elastic")
+	p <- p + ggtitle(sample) + transition_state(sample) 
         anim_save(p, filename="allwaves.gif")
     }
 }
