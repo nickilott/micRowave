@@ -278,7 +278,7 @@ microwave <- function(abundances, with_image=TRUE, animation=FALSE, background="
         to.animate <- bind_rows(dfs) 
         p <- plotWave(to.animate, colours, g=g, with_image=with_image, background=background, text=text)
 	p <- p + transition_states(sample)
-        gganimate_save(p, filename="allwaves.gif")
+        anim_save(p, filename="allwaves.gif")
     }
 }
 
