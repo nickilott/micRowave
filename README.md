@@ -11,8 +11,15 @@ MicRowave attempts to address participant egagement by creating a visually appea
 profiles whilst retaining a level of abstraction that reduces a requirement for detailed explanation of the profile i.e which
 bacteria are present and what is the relevance of the abundances of these organisms. To achieve this, micRowave takes a table
 of taxonomic abundances as output in metagenomic or 16S rRNA analyses, contructs a data frame of points that represent different taxa,
-colours the points by taxon and randomly distributes them across a wave. This provides a visual representation of an individual's
-microbiome that only retains information regarding the taxonomic abundance of organisms - without a direct identification of those
+colours the points by taxon and randomly distributes them across a wave (see below).
+
+
+(Thanks to gganimate)
+
+<img src="images/wave.gif" alt="micRowave" height="75%" width="75%"/>
+
+Once the wave is produced, an epithelial barrier (optional) is superimposed on the image to form a gut-like image. This provides a visual representation
+of an individual's microbiome that only retains information regarding the taxonomic abundance of organisms - without a direct identification of those
 organisms.
 
 ## Installation
