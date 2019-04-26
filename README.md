@@ -14,9 +14,8 @@ of taxonomic abundances as output in metagenomic or 16S rRNA analyses, contructs
 colours the points by taxon and randomly distributes them across a wave (see below).
 
 
+<img src="images/wave.gif" alt="micRowave" height="60%" width="70%"/>
 (Thanks to gganimate)
-
-<img src="images/wave.gif" alt="micRowave" height="50%" width="50%"/>
 
 Once the wave is produced, an epithelial barrier (optional) is superimposed on the image to form a gut-like image. This provides a visual representation
 of an individual's microbiome that only retains information regarding the taxonomic abundance of organisms - without a direct identification of those
